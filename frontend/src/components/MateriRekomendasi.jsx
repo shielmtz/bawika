@@ -34,9 +34,9 @@ const MateriRekomendasi = ({ categoryId }) => {
             {isLoading ? (
                 <div className="text-gray-500 mt-4">Memuat rekomendasi...</div>
             ) : (
-                <div className="grid grid-cols-3 mt-8 gap-8">
+                <div className="grid grid-cols-3 mt-8 gap-20">
                     {materiData.length > 0 ? (
-                        materiData.map((item) => (
+                        materiData.slice(0,3).map((item) => (
                             <Link
                                 onClick={handleToTop}
                                 to={`/pembelajaran/${item.id}`}
@@ -46,7 +46,7 @@ const MateriRekomendasi = ({ categoryId }) => {
                                 <img
                                     src={item.imagePath ? `${item.imagePath}` : ''}
                                     alt={item.title}
-                                    className="object-cover w-full rounded-xl h-72 transition-transform transform group-hover:scale-105"
+                                    className="object-cover w-full rounded-xl h-50 transition-transform transform group-hover:scale-105"
                                 />
                                 <p className="mt-4 text-gray-700 font-bold">{item.title}</p>
                             </Link>

@@ -7,7 +7,7 @@ const fs = require("fs");
 // Konfigurasi Multer untuk upload gambar
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        const dir = path.join(__dirname, "../../D_B/public/image/profile");
+        const dir = path.join(__dirname, "../../frontend/public/image/profile");
         if (!fs.existsSync(dir)) {
             fs.mkdirSync(dir, { recursive: true });
         }

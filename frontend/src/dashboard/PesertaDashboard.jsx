@@ -57,7 +57,7 @@ export default function PesertaDashboard() {
             <Sidebar
                 isOpen={isSidebarOpen}
                 toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
-                title={'Materi Pembelajaran'}
+                title={'Peserta Event'}
             />
             <div className="min-h-screen bg-gray-100 p-6 my-20">
                 {/* Event Information */}

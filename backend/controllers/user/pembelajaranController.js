@@ -6,7 +6,7 @@ const fs = require('fs');
 // Tentukan path folder tujuan untuk upload video
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        const dir = path.join(__dirname, '../../../D_B/public/image/materi');
+        const dir = path.join(__dirname, '../../../frontend/public/image/materi');
 
         // Periksa apakah folder sudah ada, jika belum buat folder
         if (!fs.existsSync(dir)) {
