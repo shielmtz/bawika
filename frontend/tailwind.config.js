@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-import typography from "@tailwindcss/typography";
-
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src//*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
       xs: "429px",
@@ -11,11 +9,12 @@ export default {
       lg: "1024px",
       xl: "1280px",
     },
+    
     extend: {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
     },
   },
-  plugins: [typography],
+  plugins: [require("@tailwindcss/typography")],
 };
